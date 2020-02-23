@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Lato';
-    src: url('../assets/Lato-Regular.ttf') format('truetype');
+    src: url('assets/Lato-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../assets/Lato-Light.ttf') format('truetype');
+    src: url('assets/Lato-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: light;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../assets/Lato-Bold.ttf') format('truetype');
+    src: url('assets/Lato-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: bold;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('../assets/Lato-Black.ttf') format('truetype');
+    src: url('assets/Lato-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: bold-black;
 }
@@ -186,7 +186,7 @@ body {
     height: 42px;
     border: none;
     background-color: transparent;
-    background-image: url('../assets/arrow-prev.png');
+    background-image: url('assets/arrow-prev.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -203,13 +203,13 @@ body {
 }
 
 .slider__btn--next {
-    background-image: url('../assets/arrow-next.png');
+    background-image: url('assets/arrow-next.png');
 }
 
 .slider__content {
     width: 802px;
     height: 483px;
-    background-image: url('../assets/slider-image.png');
+    background-image: url('assets/slider-image.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -291,27 +291,27 @@ body {
 }
 
 .icons-list__item--pen:before {
-    background-image: url('../assets/i-pen.png');
+    background-image: url('assets/i-pen.png');
 }
 
 .icons-list__item--bulb:before {
-    background-image: url('../assets/i-bulb.png');
+    background-image: url('assets/i-bulb.png');
 }
 
 .icons-list__item--heart:before {
-    background-image: url('../assets/i-heart.png');
+    background-image: url('assets/i-heart.png');
 }
 
 .icons-list__item--phone:before {
-    background-image: url('../assets/i-phone.png');
+    background-image: url('assets/i-phone.png');
 }
 
 .icons-list__item--bubble:before {
-    background-image: url('../assets/i-bubble.png');
+    background-image: url('assets/i-bubble.png');
 }
 
 .icons-list__item--star:before {
-    background-image: url('../assets/i-star.png');
+    background-image: url('assets/i-star.png');
 }
 
 .icons-list__item-headline {
