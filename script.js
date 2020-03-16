@@ -197,7 +197,7 @@ const formUserDesc = document.querySelector('#user-desc');
 submitFormBtn.addEventListener('click', function(e) {
     e.preventDefault();
 
-    if(formUserName.value == '' && formUserMail.value == '') {
+    if(formUserName.value == '' || formUserMail.value == '') {
         formUserName.classList.add('form__user-list-input-invalid');
         formUserMail.classList.add('form__user-list-input-invalid');
         setTimeout(() => {
