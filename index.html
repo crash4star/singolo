@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="global-wrapper"></div>
     <header class="header">
         <nav class="header__bar">
             <a href="" class="header__logo-link">Singolo<span class="header__logo-link--dot">*</span></a>
@@ -17,16 +18,16 @@
                     <a href="#" class="header__nav-item-link header__nav-item-link--active">Home</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="#" class="header__nav-item-link">Services</a>
+                    <a href="#services" class="header__nav-item-link">Services</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="singolo2.html" class="header__nav-item-link">Portfolio</a>
+                    <a href="#portfolio" class="header__nav-item-link">Portfolio</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="#" class="header__nav-item-link">About</a>
+                    <a href="#about-us" class="header__nav-item-link">About</a>
                 </li>
                 <li class="header__nav-item">
-                    <a href="#" class="header__nav-item-link">Contact</a>
+                    <a href="#contacts" class="header__nav-item-link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -34,15 +35,30 @@
     <main class="content">
         <section class="slider">
             <div class="slider__wrapper">
-                <button class="slider__btn slider__btn--prev"></button>
+                <button class="slider__btn slider__btn--prev">
+                    <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.3022 4.0077C16.2333 3.09077 16.2325 1.64471 15.3003 0.728736C14.3113 -0.242912 12.6634 -0.242912 11.6745 0.728737L0.955147 11.2608C-0.318384 12.5121 -0.318381 14.4879 0.955149 15.7392L11.6745 26.2713C12.6634 27.2429 14.3113 27.2429 15.3003 26.2713C16.2325 25.3553 16.2333 23.9092 15.3022 22.9923L7.93355 15.7366C6.66347 14.486 6.66347 12.514 7.93355 11.2634L15.3022 4.0077Z"
+                            fill="#E94348" />
+                    </svg>
+                </button>
                 <div class="slider__content"></div>
-                <button class="slider__btn slider__btn--next"></button>
+                <button class="slider__btn slider__btn--next">
+                    <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.697849 22.9923C-0.233349 23.9092 -0.232514 25.3553 0.699743 26.2713C1.68867 27.2429 3.33657 27.2429 4.32549 26.2713L15.0449 15.7392C16.3184 14.4879 16.3184 12.5121 15.0449 11.2608L4.32549 0.728735C3.33657 -0.242913 1.68867 -0.242911 0.699746 0.728737C-0.232511 1.64471 -0.233347 3.09077 0.69785 4.00769L8.06645 11.2634C9.33653 12.514 9.33653 14.486 8.06645 15.7366L0.697849 22.9923Z"
+                            fill="#E94348" />
+                    </svg>
+                </button>
             </div>
+            <span class="color-line color-line--slider"></span>
         </section>
-        <section class="services">
+        <section class="services" id="services">
             <div class="services__block services__block--text">
                 <h1 class="services__block-headline">Our Services</h1>
-                <p class="services__block-desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <p class="services__block-desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
             <div class="services__block services__block--icons">
                 <ul class="icons-list">
@@ -78,13 +94,15 @@
                     </li>
                 </ul>
             </div>
+            <span class="color-line color-line--services"></span>
         </section>
     </main>
-    <main class="portfolio-page">
+    <main class="portfolio-page" id="portfolio">
         <section class="portfolio">
             <div class="portfolio__title">
                 <h1 class="portfolio__header">Portfolio</h1>
-                <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                    odio sem nec elit.</p>
             </div>
             <div class="portfolio__filter">
                 <button class="portfolio__filter-btn portfolio__filter-btn--active">All</button>
@@ -106,50 +124,71 @@
                 <img class="portfolio__works-item" src="assets/portfolio-work-11.png" alt="Work for portfolio">
                 <img class="portfolio__works-item" src="assets/portfolio-work-12.png" alt="Work for portfolio">
             </div>
+            <span class="color-line color-line--portfolio"></span>
         </section>
-        <section class="about-us">
+        <section class="about-us" id="about-us">
             <div class="about-us__title">
                 <h2 class="about-us__header">About Us</h2>
-                <p class="about-us__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
+                <p class="about-us__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
             </div>
             <div class="about-us__people">
                 <article class="about-us__people-item">
-                    <img class="about-us__photo about-us__photo--adam-jensen" src="assets/Adam-Jensen.jpg" alt="One of us">
+                    <img class="about-us__photo about-us__photo--adam-jensen" src="assets/Adam-Jensen.jpg"
+                        alt="One of us">
                     <h2 class="about-us__name">Adam Jensen</h2>
-                    <p class="about-us__desc-people">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                    <p class="about-us__desc-people">Quisque luctus, quam eget molestie commodo, lacus purus cursus
+                        purus, nec rutrum tellus dolor id lorem.</p>
                     <div class="about-us__social">
-                        <a class="about-us__social-link about-us__social-link--facebook" href="#" aria-label="Facebook">Facebook</a>
-                        <a class="about-us__social-link about-us__social-link--google-plus" href="#" aria-label="Google+">Google+</a>
-                        <a class="about-us__social-link about-us__social-link--twitter" href="#" aria-label="Twitter">Twitter</a>
-                        <a class="about-us__social-link about-us__social-link--linked-in" href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a class="about-us__social-link about-us__social-link--facebook" href="#"
+                            aria-label="Facebook">Facebook</a>
+                        <a class="about-us__social-link about-us__social-link--google-plus" href="#"
+                            aria-label="Google+">Google+</a>
+                        <a class="about-us__social-link about-us__social-link--twitter" href="#"
+                            aria-label="Twitter">Twitter</a>
+                        <a class="about-us__social-link about-us__social-link--linked-in" href="#"
+                            aria-label="LinkedIn">LinkedIn</a>
                     </div>
                 </article>
                 <article class="about-us__people-item">
-                    <img class="about-us__photo about-us__photo--desmond-miles" src="assets/Desmond-Miles.jpg" alt="One of us">
+                    <img class="about-us__photo about-us__photo--desmond-miles" src="assets/Desmond-Miles.jpg"
+                        alt="One of us">
                     <h2 class="about-us__name">Desmond Miles</h2>
-                    <p class="about-us__desc-people">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                    <p class="about-us__desc-people">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
+                        laoreet, viverra lacus ut, ultrices velit.</p>
                     <div class="about-us__social">
-                        <a class="about-us__social-link about-us__social-link--facebook" href="#" aria-label="Facebook">Facebook</a>
-                        <a class="about-us__social-link about-us__social-link--google-plus" href="#" aria-label="Google+">Google+</a>
-                        <a class="about-us__social-link about-us__social-link--twitter" href="#" aria-label="Twitter">Twitter</a>
-                        <a class="about-us__social-link about-us__social-link--linked-in" href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a class="about-us__social-link about-us__social-link--facebook" href="#"
+                            aria-label="Facebook">Facebook</a>
+                        <a class="about-us__social-link about-us__social-link--google-plus" href="#"
+                            aria-label="Google+">Google+</a>
+                        <a class="about-us__social-link about-us__social-link--twitter" href="#"
+                            aria-label="Twitter">Twitter</a>
+                        <a class="about-us__social-link about-us__social-link--linked-in" href="#"
+                            aria-label="LinkedIn">LinkedIn</a>
                     </div>
                 </article>
                 <article class="about-us__people-item">
-                    <img class="about-us__photo about-us__photo--scolara-visari" src="assets/Scolara-Visari.jpg" alt="One of us">
+                    <img class="about-us__photo about-us__photo--scolara-visari" src="assets/Scolara-Visari.jpg"
+                        alt="One of us">
                     <h2 class="about-us__name">Scolara Visari</h2>
-                    <p class="about-us__desc-people">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                    <p class="about-us__desc-people">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                        et consequat felis. Quisque condimentum.</p>
                     <div class="about-us__social">
-                        <a class="about-us__social-link about-us__social-link--facebook" href="#" aria-label="Facebook">Facebook</a>
-                        <a class="about-us__social-link about-us__social-link--google-plus" href="#" aria-label="Google+">Google+</a>
-                        <a class="about-us__social-link about-us__social-link--twitter" href="#" aria-label="Twitter">Twitter</a>
-                        <a class="about-us__social-link about-us__social-link--linked-in" href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a class="about-us__social-link about-us__social-link--facebook" href="#"
+                            aria-label="Facebook">Facebook</a>
+                        <a class="about-us__social-link about-us__social-link--google-plus" href="#"
+                            aria-label="Google+">Google+</a>
+                        <a class="about-us__social-link about-us__social-link--twitter" href="#"
+                            aria-label="Twitter">Twitter</a>
+                        <a class="about-us__social-link about-us__social-link--linked-in" href="#"
+                            aria-label="LinkedIn">LinkedIn</a>
                     </div>
                 </article>
             </div>
         </section>
     </main>
-    <main class="contact-page">
+    <main class="contact-page" id="contacts">
         <section class="contact__wrapper">
             <h1 class="contact__headline">Get a Quote</h1>
             <p class="contact__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -157,25 +196,31 @@
                 cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="form-block">
                 <article class="form__user">
-                    <form action="#" class="form__user" method="POST">
+                    <form action="#" class="form__user">
                         <ul class="form__user-list">
                             <li class="form__user-list-item">
-                                <input type="text" class="form__user-list-input" name="user-info"
+                                <input type="text" class="form__user-list-input" id="user-name" name="user-info"
                                     placeholder="Name (Required)" required>
                             </li>
                             <li class="form__user-list-item">
-                                <input type="email" class="form__user-list-input" name="user-info"
+                                <input type="email" class="form__user-list-input" id="user-email" name="user-info"
                                     placeholder="Email (Required)" required>
                             </li>
                             <li class="form__user-list-item">
-                                <input type="text" class="form__user-list-input" name="user-info" placeholder="Subject">
+                                <input type="text" class="form__user-list-input" id="user-subject" name="user-info" placeholder="Subject">
                             </li>
                             <li class="form__user-list-item">
-                                <textarea class="form__user-list-area" name="user-info" cols="30" rows="10"
+                                <textarea class="form__user-list-area" id="user-desc" name="user-info" cols="30" rows="10" maxlength="900"
                                     placeholder="Describe your project in detail..."></textarea>
                             </li>
                         </ul>
-                        <button class="form__user-submit">Отправить</button>
+                        <button class="form__user-submit">Send</button>
+                        <!-- <div class="form__pop">
+                            <p class="form__pop-success">The letter was sent </p>
+                            <p class="form__pop-subject">Lorem, ipsum dolor.</p>
+                            <p class="form__pop-describe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, saepe?.</p>
+                            <button class="form__pop-ok-btn">Ок</button>
+                        </div> -->
                     </form>
                 </article>
                 <article class="form__info">
@@ -217,6 +262,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
