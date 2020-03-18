@@ -26,6 +26,10 @@
     font-style: bold-black;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -151,11 +155,6 @@ body {
     color: #f06c64;
 }
 
-.content {
-    width: 100%;
-    margin-top: 95px;
-}
-
 .color-line {
     position: absolute;
     left: 0;
@@ -183,6 +182,13 @@ body {
     width: 100%;
     height: 606px;
     background-color: #F06C64;
+}
+
+.height-wrapper {
+    display: block;
+    width: 100%;
+    height: 95px;
+    background-color: transparent;
 }
 
 .slider__wrapper {
@@ -792,7 +798,7 @@ body {
     margin-top: 44px;
 }
 
-.form__user {
+.form__user-wrapper {
     width: 620px;
 }
 

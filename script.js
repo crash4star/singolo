@@ -1,14 +1,38 @@
-//Активное состояние элементов навигации
-const headerBlock = document.querySelector('.header');
-const headerLink = document.querySelectorAll('.header__nav-item-link');
+//Активное состояние элементов навигации и выбор при скролле
+document.addEventListener('scroll', function(e) {
 
+    const position = window.scrollY;
+    const blocks = document.querySelectorAll('.block-wrapper');
+    const menuItem = document.querySelectorAll('.header__nav-item-link');
 
-headerLink.forEach(btn => {
-    btn.addEventListener('click', function (e) {
-        headerLink.forEach(del => del.classList.remove('header__nav-item-link--active'));
-        this.classList.add('header__nav-item-link--active');
+    blocks.forEach(wrap => {
+        wrap.getAttribute('id');
+
+        if(wrap.offsetTop <= position + 100 && (wrap.offsetTop + wrap.offsetHeight) > position) {
+            menuItem.forEach(link => {
+                link.classList.remove('header__nav-item-link--active');
+                if(wrap.getAttribute('id') ===  link.getAttribute('href').substring(1)) {
+                    link.classList.add('header__nav-item-link--active');
+                }
+
+                if(link.textContent.toLowerCase() === 'home') {
+                    link.onclick = () => window.scrollTo({top: 1000});
+                }
+            });
+        }
     });
 });
+
+const menuItem = document.querySelectorAll('.header__nav-item-link');
+menuItem.forEach(link => {
+    link.onclick = function() {
+        menuItem.forEach(btn => {
+            btn.classList.remove('header__nav-item-link--active');
+        });
+        this.classList.add('header__nav-item-link--active');
+    };
+});
+
 
 
 
@@ -100,6 +124,8 @@ prevSliderBtn.addEventListener('click', function () {
     offDisplay();
 });
 
+
+//Выключает экраны телефонов слайдера
 function offDisplay() {
     const offLeftDisplay = document.createElement('div');
     offLeftDisplay.classList.add('inactive-left');
@@ -139,36 +165,30 @@ const portfolioItem = document.querySelectorAll('.portfolio__works-item');
 
 portfolioBtn.forEach(btn => {
     btn.addEventListener('click', function (e) {
-        portfolioBtn.forEach(del => del.classList.remove('portfolio__filter-btn--active'));
-        portfolioBtn.forEach(del => del.classList.add('portfolio__filter-btn'));
-        this.classList.remove('portfolio__filter-btn');
+        portfolioBtn.forEach(active => {
+            active.classList.remove('portfolio__filter-btn--active');
+        });
         this.classList.add('portfolio__filter-btn--active');
 
         let srcImgArr = [];
 
         portfolioItem.forEach(item => {
-            srcImgArr.push(item.getAttribute('src'))
+            srcImgArr.push(item)
         });
 
         shuffleWorks(srcImgArr);
+        
+        portfolioWorks.innerHTML = '';
+        srcImgArr.forEach(element => {
+            portfolioWorks.appendChild(element)
+        });
 
-        portfolioItem.forEach((item, i, arr) => arr[i].setAttribute('src', srcImgArr[i]));
+        // portfolioItem.forEach((item, i, arr) => arr[i].setAttribute('src', srcImgArr[i]));
     });
 });
 
-portfolioItem.forEach(active => {
-    active.onclick = function () {
-        if(active.classList.contains('portfolio__works-item--active')) {
-            active.classList.remove('portfolio__works-item--active');
-        } else {
-            portfolioItem.forEach(item => item.classList.remove('portfolio__works-item--active'));
-            this.classList.add('portfolio__works-item--active');
-        }
-    }
-});
 
-
-//Возвращает массив с измененным порядком элементов
+//Возвращает массив с измененным порядком элементов блока portfolio
 function shuffleWorks(arr) {
     let j;
     let temp;
@@ -245,10 +265,7 @@ submitFormBtn.addEventListener('click', function(e) {
         okBtn.addEventListener('click', function(e) {
             e.preventDefault();
             contactsForm.removeChild(popUp);
-            formUserName.value = '';
-            formUserMail.value = '';
-            formUserSubject.value = '';
-            formUserDesc.value = '';
+            contactsForm.reset();
             globalWrapper.classList.remove('global-wrapper--pop');
         });
     }

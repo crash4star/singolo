@@ -15,7 +15,7 @@
             <a href="" class="header__logo-link">Singolo<span class="header__logo-link--dot">*</span></a>
             <ul class="header__nav">
                 <li class="header__nav-item">
-                    <a href="#" class="header__nav-item-link header__nav-item-link--active">Home</a>
+                    <a href="#home" class="header__nav-item-link header__nav-item-link--active">Home</a>
                 </li>
                 <li class="header__nav-item">
                     <a href="#services" class="header__nav-item-link">Services</a>
@@ -32,8 +32,10 @@
             </ul>
         </nav>
     </header>
-    <main class="content">
-        <section class="slider">
+
+    <div class="block-wrapper" id="home">
+        <div class="height-wrapper"></div>
+        <section class="slider"> 
             <div class="slider__wrapper">
                 <button class="slider__btn slider__btn--prev">
                     <svg width="16" height="27" viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +55,10 @@
             </div>
             <span class="color-line color-line--slider"></span>
         </section>
-        <section class="services" id="services">
+    </div>
+
+    <div class="block-wrapper" id="services">
+        <section class="services">
             <div class="services__block services__block--text">
                 <h1 class="services__block-headline">Our Services</h1>
                 <p class="services__block-desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -96,37 +101,44 @@
             </div>
             <span class="color-line color-line--services"></span>
         </section>
-    </main>
-    <main class="portfolio-page" id="portfolio">
-        <section class="portfolio">
-            <div class="portfolio__title">
-                <h1 class="portfolio__header">Portfolio</h1>
-                <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                    odio sem nec elit.</p>
-            </div>
-            <div class="portfolio__filter">
-                <button class="portfolio__filter-btn portfolio__filter-btn--active">All</button>
-                <button class="portfolio__filter-btn">Web Design</button>
-                <button class="portfolio__filter-btn">Graphic Design</button>
-                <button class="portfolio__filter-btn">Artwork</button>
-            </div>
-            <div class="portfolio__works">
-                <img class="portfolio__works-item" src="assets/portfolio-work-1.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-2.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-3.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-4.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-5.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-6.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-7.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-8.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-9.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-10.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-11.png" alt="Work for portfolio">
-                <img class="portfolio__works-item" src="assets/portfolio-work-12.png" alt="Work for portfolio">
-            </div>
-            <span class="color-line color-line--portfolio"></span>
+    </div>
+
+    <div class="block-wrapper" id="portfolio">
+        <section class="portfolio-page">
+            <section class="portfolio">
+                <div class="portfolio__title">
+                    <h1 class="portfolio__header">Portfolio</h1>
+                    <p class="portfolio__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                        lacinia
+                        odio sem nec elit.</p>
+                </div>
+                <div class="portfolio__filter">
+                    <button class="portfolio__filter-btn portfolio__filter-btn--active">All</button>
+                    <button class="portfolio__filter-btn">Web Design</button>
+                    <button class="portfolio__filter-btn">Graphic Design</button>
+                    <button class="portfolio__filter-btn">Artwork</button>
+                </div>
+                <div class="portfolio__works">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-1.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-2.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-3.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-4.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-5.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-6.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-7.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-8.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-9.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-10.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-11.png" alt="Work for portfolio">
+                    <img class="portfolio__works-item" src="assets/portfolio-work-12.png" alt="Work for portfolio">
+                </div>
+                <span class="color-line color-line--portfolio"></span>
+            </section>
         </section>
-        <section class="about-us" id="about-us">
+    </div>
+
+    <div class="block-wrapper" id="about-us">
+        <section class="about-us">
             <div class="about-us__title">
                 <h2 class="about-us__header">About Us</h2>
                 <p class="about-us__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -187,66 +199,71 @@
                 </article>
             </div>
         </section>
-    </main>
-    <main class="contact-page" id="contacts">
-        <section class="contact__wrapper">
-            <h1 class="contact__headline">Get a Quote</h1>
-            <p class="contact__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
-                non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
-                cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="form-block">
-                <article class="form__user">
-                    <form action="#" class="form__user">
-                        <ul class="form__user-list">
-                            <li class="form__user-list-item">
-                                <input type="text" class="form__user-list-input" id="user-name" name="user-info"
-                                    placeholder="Name (Required)" required>
+    </div>
+
+    <div class="block-wrapper" id="contacts">
+        <section class="contact-page">
+            <section class="contact__wrapper">
+                <h1 class="contact__headline">Get a Quote</h1>
+                <p class="contact__desc">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis,
+                    non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
+                    tellus ac
+                    cursus commodo, tortor mauris condimentum nibh.</p>
+                <div class="form-block">
+                    <article class="form__user-wrapper">
+                        <form action="#" class="form__user">
+                            <ul class="form__user-list">
+                                <li class="form__user-list-item">
+                                    <input type="text" class="form__user-list-input" id="user-name" name="user-info"
+                                        placeholder="Name (Required)" required>
+                                </li>
+                                <li class="form__user-list-item">
+                                    <input type="email" class="form__user-list-input" id="user-email" name="user-info"
+                                        placeholder="Email (Required)" required>
+                                </li>
+                                <li class="form__user-list-item">
+                                    <input type="text" class="form__user-list-input" id="user-subject" name="user-info"
+                                        placeholder="Subject">
+                                </li>
+                                <li class="form__user-list-item">
+                                    <textarea class="form__user-list-area" id="user-desc" name="user-info" cols="30"
+                                        rows="10" maxlength="900"
+                                        placeholder="Describe your project in detail..."></textarea>
+                                </li>
+                            </ul>
+                            <button class="form__user-submit">Send</button>
+                        </form>
+                    </article>
+                    <article class="form__info">
+                        <h2 class="form__info-headline">Contact Information</h2>
+                        <p class="form__info-desc">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra
+                            nibh.
+                            Fusce
+                            vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
+                            faucibus.
+                            Morbi at aliquet turpis, et consequat felis. </p>
+                        <ul class="form__info-list">
+                            <li class="form__info-list-item">
+                                <a class="form__info-list-paragraph form__info-list-paragraph--adress">Elm St. 14/05
+                                    Lost
+                                    City</a>
                             </li>
-                            <li class="form__user-list-item">
-                                <input type="email" class="form__user-list-input" id="user-email" name="user-info"
-                                    placeholder="Email (Required)" required>
+                            <li class="form__info-list-item">
+                                <a href="tel:+03528 331 86 35"
+                                    class="form__info-list-paragraph form__info-list-paragraph-tel">03528 331 86 35</a>
                             </li>
-                            <li class="form__user-list-item">
-                                <input type="text" class="form__user-list-input" id="user-subject" name="user-info" placeholder="Subject">
-                            </li>
-                            <li class="form__user-list-item">
-                                <textarea class="form__user-list-area" id="user-desc" name="user-info" cols="30" rows="10" maxlength="900"
-                                    placeholder="Describe your project in detail..."></textarea>
+                            <li class="form__info-list-item">
+                                <a href="mailto:nfo@singolo.com"
+                                    class="form__info-list-paragraph form__info-list-paragraph--mail">info@singolo.com</a>
                             </li>
                         </ul>
-                        <button class="form__user-submit">Send</button>
-                        <!-- <div class="form__pop">
-                            <p class="form__pop-success">The letter was sent </p>
-                            <p class="form__pop-subject">Lorem, ipsum dolor.</p>
-                            <p class="form__pop-describe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, saepe?.</p>
-                            <button class="form__pop-ok-btn">Ок</button>
-                        </div> -->
-                    </form>
-                </article>
-                <article class="form__info">
-                    <h2 class="form__info-headline">Contact Information</h2>
-                    <p class="form__info-desc">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh.
-                        Fusce
-                        vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus.
-                        Morbi at aliquet turpis, et consequat felis. </p>
-                    <ul class="form__info-list">
-                        <li class="form__info-list-item">
-                            <a class="form__info-list-paragraph form__info-list-paragraph--adress">Elm St. 14/05 Lost
-                                City</a>
-                        </li>
-                        <li class="form__info-list-item">
-                            <a href="tel:+03528 331 86 35"
-                                class="form__info-list-paragraph form__info-list-paragraph-tel">03528 331 86 35</a>
-                        </li>
-                        <li class="form__info-list-item">
-                            <a href="mailto:nfo@singolo.com"
-                                class="form__info-list-paragraph form__info-list-paragraph--mail">info@singolo.com</a>
-                        </li>
-                    </ul>
-                </article>
-            </div>
+                    </article>
+                </div>
+            </section>
         </section>
-    </main>
+    </div>
+
     <footer class="contact-footer">
         <div class="contact-footer__wrapper">
             <p class="contact-footer__cop">© Copyright 2013</p>
