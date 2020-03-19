@@ -161,6 +161,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 6px;
+    transition: all 0.4s ease;
 }
 
 .color-line--slider {
@@ -182,12 +183,13 @@ body {
     width: 100%;
     height: 606px;
     background-color: #F06C64;
+    transition: all 0.4s ease;
 }
 
 .height-wrapper {
     display: block;
     width: 100%;
-    height: 95px;
+    height: 89px;
     background-color: transparent;
 }
 
@@ -195,13 +197,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 940px;
+    width: 935px;
     height: 484px;
     margin: 0 auto;
-    margin-top: -10px;
 }
 
-.slider__btn {
+.slider__btn  {
     width: 16px;
     height: 42px;
     border: none;
@@ -211,8 +212,14 @@ body {
 }
 
 .slider__btn--prev {
-    margin-left: 2px;
+    margin-left: -5px;
+    margin-right: 5px;
 }
+
+.slider__btn--next {
+    margin-right: 3px;
+}
+
 
 .slider__btn:hover {
     transform: scale(1.12);
@@ -223,9 +230,33 @@ body {
 }
 
 .slider__content {
+    width: 796px;
+    height: 483px;
+    overflow: hidden;
+}
+
+.slider__content-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.slider__content-list-item {
+    margin: 0;
+    padding: 0;
+}
+
+.slider__content ul li:nth-child(1)  {
     position: relative;
-    width: 803px;
-    height: 485px;
+}
+
+.slider__content-item {
+    position: relative;
+    width: 796px;
+    height: 483px;
     background-image: url('assets/slider-image.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -233,6 +264,10 @@ body {
     animation-duration: 0.6s;
     animation-fill-mode: forwards;
     transition: all 0.6s ease;
+}
+
+.slider__content ul li:nth-child(2) .slider__content-item {
+    background-image: url('assets/slider-image-2.png');
 }
 
 @keyframes animateSlideLeft {
@@ -278,9 +313,9 @@ body {
 .inactive-left {
     position: absolute;
     top: 65px;
-    left: 16px;
-    width: 189px;
-    height: 335px;
+    left: 14px;
+    width: 188px;
+    height: 334px;
     background-color: black;
     opacity: 0;
     cursor: pointer;
@@ -290,13 +325,17 @@ body {
 .inactive-right{
     position: absolute;
     top: 135px;
-    right: 92px;
-    width: 335px;
-    height: 190px;
+    right: 90px;
+    width: 334px;
+    height: 188px;
     background-color: black;
     opacity: 0;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.hide-display {
+    opacity: 0;
 }
 
 .show-display {
@@ -1079,12 +1118,12 @@ body {
 @keyframes popShow {
     0% {
         opacity: 0;
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, -70%);
     }
 
     43% {
         opacity: 1;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -40%);
     }
 
     100% {
