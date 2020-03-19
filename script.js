@@ -215,6 +215,7 @@ const sliderContentItem = sliderGlobalWrapper.querySelectorAll('.slider__content
 let sliderCount = 0;
 
 
+
 sliderNextBtn.addEventListener('click', function () {
     sliderCount++;
     offDisplay();
@@ -262,7 +263,7 @@ sliderPrevBtn.addEventListener('click', function () {
 
 //Контроль цвета заднего фона
 function controlBgControl() {
-    if(sliderCount == 2) {
+    if(sliderCount == 2 || sliderCount == 0) {
         sliderGlobalWrapper.style.backgroundColor = '#F06C64';
         sliderBgColorLine.style.backgroundColor ='#ea676b';
 
@@ -272,13 +273,14 @@ function controlBgControl() {
     }
 
     sliderBtnsSvg.forEach(svg => {
-        if(sliderCount == 2) {
+        if(sliderCount == 2 || sliderCount == 0) {
             svg.setAttribute('fill', '#E94348');
         } else {
             svg.setAttribute('fill', 'rgb(71, 109, 205)');
         }
     });
 }
+
 
 //Выключает экраны телефонов слайдера
 function offDisplay() {
