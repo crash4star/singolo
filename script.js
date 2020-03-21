@@ -226,7 +226,7 @@ sliderNextBtn.addEventListener('click', function () {
         sliderContentList.style.marginLeft = `-${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`;
         sliderContentList.style.opacity = '0';
         setTimeout(() => {
-            sliderContentList.style.marginLeft = `${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`; 
+            sliderContentList.style.marginLeft = `${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`;
         }, 330);
         setTimeout(() => {
             sliderContentList.style.opacity = '1';
@@ -249,7 +249,7 @@ sliderPrevBtn.addEventListener('click', function () {
         sliderContentList.style.marginLeft = `${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`;
         sliderContentList.style.opacity = '0';
         setTimeout(() => {
-            sliderContentList.style.marginLeft = `-${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`; 
+            sliderContentList.style.marginLeft = `-${sliderContentItem[0].offsetWidth * sliderContentItem.length}px`;
         }, 300);
         setTimeout(() => {
             sliderContentList.style.opacity = '1';
@@ -263,17 +263,17 @@ sliderPrevBtn.addEventListener('click', function () {
 
 //Контроль цвета заднего фона
 function controlBgControl() {
-    if(sliderCount == 2 || sliderCount == 0) {
+    if (sliderCount == 2 || sliderCount == 0) {
         sliderGlobalWrapper.style.backgroundColor = '#F06C64';
-        sliderBgColorLine.style.backgroundColor ='#ea676b';
+        sliderBgColorLine.style.backgroundColor = '#ea676b';
 
     } else {
         sliderGlobalWrapper.style.backgroundColor = 'rgb(100, 139, 240)';
-        sliderBgColorLine.style.backgroundColor ='rgb(71, 109, 205)';
+        sliderBgColorLine.style.backgroundColor = 'rgb(71, 109, 205)';
     }
 
     sliderBtnsSvg.forEach(svg => {
-        if(sliderCount == 2 || sliderCount == 0) {
+        if (sliderCount == 2 || sliderCount == 0) {
             svg.setAttribute('fill', '#E94348');
         } else {
             svg.setAttribute('fill', 'rgb(71, 109, 205)');
@@ -281,18 +281,15 @@ function controlBgControl() {
     });
 }
 
+const offLeftDisplay = document.createElement('div');
+offLeftDisplay.classList.add('inactive-left');
+
+const offRightDisplay = document.createElement('div');
+offRightDisplay.classList.add('inactive-right');
 
 //Выключает экраны телефонов слайдера
 function offDisplay() {
-    const offLeftDisplay = document.createElement('div');
-    offLeftDisplay.classList.add('inactive-left');
-
-    const offRightDisplay = document.createElement('div');
-    offRightDisplay.classList.add('inactive-right');
-
-    
-
-    if (sliderCount == 0) {
+    if (sliderCount == 0 || sliderCount == 2) {
         sliderContentItem[0].appendChild(offLeftDisplay);
         sliderContentItem[0].appendChild(offRightDisplay);
 

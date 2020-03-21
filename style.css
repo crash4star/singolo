@@ -313,8 +313,8 @@ body {
 .inactive-left {
     position: absolute;
     top: 65px;
-    left: 14px;
-    width: 188px;
+    left: 13px;
+    width: 189px;
     height: 334px;
     background-color: black;
     opacity: 0;
@@ -327,7 +327,7 @@ body {
     top: 135px;
     right: 90px;
     width: 334px;
-    height: 188px;
+    height: 189px;
     background-color: black;
     opacity: 0;
     cursor: pointer;
