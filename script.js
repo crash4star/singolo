@@ -310,3 +310,24 @@ function offDisplay() {
 }
 
 offDisplay();
+
+
+
+//Меню responsive
+const menuBtn = document.querySelector('.header__bar-menu-btn');
+const menuLink = document.querySelector('.header__logo-link');
+const menuBlock = document.querySelector('.header__nav');
+
+menuBtn.addEventListener('click', function() {
+    this.classList.toggle('header__bar-menu-btn--show');
+
+    if(this.classList.contains('header__bar-menu-btn--show')) {
+        menuLink.classList.add('header__logo-link--show');
+        menuBlock.classList.remove('header__nav--hide');
+        menuBlock.classList.add('header__nav--show');
+    } else {
+        menuLink.classList.remove('header__logo-link--show');
+        menuBlock.classList.add('header__nav--hide');
+        menuBlock.classList.remove('header__nav--show');
+    }
+});
