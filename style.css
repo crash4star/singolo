@@ -127,7 +127,7 @@ body {
         width: 26px;
         height: 21px;
         border: none;
-        background-image: url('/assets/i-menu-btn.png');
+        background-image: url('assets/i-menu-btn.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
